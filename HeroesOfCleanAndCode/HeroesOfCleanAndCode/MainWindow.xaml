@@ -5,8 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeroesOfCleanAndCode"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="HeroesOfCleanAndCode" Height="1000" Width="1800"
+        Background="{StaticResource BackgroundColor}"
+        Foreground="{StaticResource ForegroundColor}"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown"
+        MouseLeftButtonDown="Window_MouseDown">
+    
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                x:Name="GameGridBorder"
+                BorderBrush="{StaticResource GridLineColor}"
+                BorderThickness="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderOptions.EdgeMode="Aliased">
+            
+            <UniformGrid x:Name="GameGrid"
+                         Width="1700"
+                         Height="850"
+                         Background="{StaticResource BackgroundColor}"
+                         SnapsToDevicePixels="True"
+                         RenderOptions.BitmapScalingMode="HighQuality">
+                <UniformGrid.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Margin" Value="2"/>
+                    </Style>
+                </UniformGrid.Resources>
+            </UniformGrid>
+        </Border>
+                
+                
+        
+        <Grid Grid.Row="1" x:Name="InfoGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.Row="0"
+                       x:Name="ActiveEntityName"
+                       Text="ACRIVE ENTITY NAME"
+                       FontSize="16"
+                       Margin="5"/>
+
+            <TextBlock Grid.Column="2" Grid.Row="0"
+                       x:Name="ActiveEntityHP"
+                       Text="ACRIVE ENTITY HP"
+                       FontSize="16"
+                       Margin="5"/>
+
+            <TextBlock Grid.Column="2" Grid.Row="1"
+                       x:Name="ActiveEntitySP"
+                       Text="ACRIVE ENTITY SP"
+                       FontSize="16"
+                       Margin="5"/>
+
+            <TextBlock Grid.Column="3" Grid.Row="0"
+                       x:Name="ActiveEntityMobility"
+                       Text="ACRIVE ENTITY Mobility"
+                       FontSize="16"
+                       Margin="5"/>
+
+            <TextBlock Grid.Column="3" Grid.Row="1"
+                       x:Name="ActiveEntityRange"
+                       Text="ACRIVE ENTITY Range"
+                       FontSize="16"
+                       Margin="5"/>
+        </Grid>
 
     </Grid>
 </Window>

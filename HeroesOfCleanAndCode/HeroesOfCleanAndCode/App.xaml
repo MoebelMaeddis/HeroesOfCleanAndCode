@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:HeroesOfCleanAndCode"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="BackgroundColor">#222222</SolidColorBrush>
+        <SolidColorBrush x:Key="ForegroundColor">#D4D4D4</SolidColorBrush>
+        <SolidColorBrush x:Key="GridLineColor">#666666</SolidColorBrush>
     </Application.Resources>
 </Application>

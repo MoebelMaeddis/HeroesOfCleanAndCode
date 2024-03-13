@@ -7,4 +7,28 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\Images\Empty.png" />
+    <None Remove="Assets\Images\Forest.png" />
+    <None Remove="Assets\Images\Grass.png" />
+    <None Remove="Assets\Images\Mountain.png" />
+    <None Remove="Assets\Images\Ore.png" />
+    <None Remove="Assets\Images\River.png" />
+    <None Remove="Assets\Images\Water.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Saves\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\Empty.png" />
+    <Resource Include="Assets\Images\Forest.png" />
+    <Resource Include="Assets\Images\Grass.png" />
+    <Resource Include="Assets\Images\Mountain.png" />
+    <Resource Include="Assets\Images\Ore.png" />
+    <Resource Include="Assets\Images\River.png" />
+    <Resource Include="Assets\Images\Water.png" />
+  </ItemGroup>
+
 </Project>
