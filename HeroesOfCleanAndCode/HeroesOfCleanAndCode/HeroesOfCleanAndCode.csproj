@@ -13,6 +13,10 @@
     <None Remove="Assets\Images\Grass.png" />
     <None Remove="Assets\Images\Mountain.png" />
     <None Remove="Assets\Images\Ore.png" />
+    <None Remove="Assets\Images\PBlue.png" />
+    <None Remove="Assets\Images\PGreen.png" />
+    <None Remove="Assets\Images\PRed.png" />
+    <None Remove="Assets\Images\raw.svg" />
     <None Remove="Assets\Images\River.png" />
     <None Remove="Assets\Images\Water.png" />
   </ItemGroup>
@@ -27,6 +31,10 @@
     <Resource Include="Assets\Images\Grass.png" />
     <Resource Include="Assets\Images\Mountain.png" />
     <Resource Include="Assets\Images\Ore.png" />
+    <Resource Include="Assets\Images\PBlue.png" />
+    <Resource Include="Assets\Images\PGreen.png" />
+    <Resource Include="Assets\Images\PRed.png" />
+    <Resource Include="Assets\Images\raw.svg" />
     <Resource Include="Assets\Images\River.png" />
     <Resource Include="Assets\Images\Water.png" />
   </ItemGroup>
