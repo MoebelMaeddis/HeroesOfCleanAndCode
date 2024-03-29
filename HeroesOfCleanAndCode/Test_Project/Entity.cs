@@ -39,7 +39,7 @@
 
         public void TakeDamage(int amount)
         {
-            // Refactoring after Test because of possible Divide by 0
+            // Refactoring (?) after Test because of possible Divide by 0
             if (shieldPoints > 0)
             {
                 currentHitPoints -= amount / shieldPoints;
