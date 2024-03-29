@@ -30,7 +30,16 @@
 
         public void TakeDamage(int amount)
         {
-            currentHitPoints -= amount / shieldPoints;
+            // Refactoring (?) after Test because of possible Divide by 0
+            if (shieldPoints > 0)
+            {
+                currentHitPoints -= amount / shieldPoints;
+            }
+            else
+            {
+                currentHitPoints -= amount;
+            }
+            //
             if (currentHitPoints <= 0) isDead = true;
         }
 
