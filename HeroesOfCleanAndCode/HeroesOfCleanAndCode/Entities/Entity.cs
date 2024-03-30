@@ -44,8 +44,8 @@
         }
 
         public void HealDamage(int amount)
-        {
-            currentHitPoints += amount;
+        {           
+            currentHitPoints = currentHitPoints + amount;
             if (currentHitPoints > maxHitPoints) currentHitPoints = maxHitPoints;
         }
 
