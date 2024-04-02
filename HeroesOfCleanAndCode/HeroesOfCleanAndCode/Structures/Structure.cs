@@ -18,6 +18,7 @@
         }
         ~Structure() { }
 
+        // Code Smell 1 --> doppelter Code (siehe Entity.cs)
         public void TakeDamage(int damage)
         {
             currentHitPoints -= damage / shieldPoints;
@@ -28,6 +29,7 @@
             }
         }
 
+        // Code Smell 2 --> doppelter Code (siehe Entity.cs)
         public void HealDamage(int points)
         {
             if (isDestroyed == false)

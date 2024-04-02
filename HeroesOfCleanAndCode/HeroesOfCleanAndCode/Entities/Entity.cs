@@ -28,6 +28,7 @@
             position.Translate(direction);
         }
 
+        // Code Smell 1 --> doppelter Code (siehe Structure.cs)
         public void TakeDamage(int amount)
         {
             // Refactoring (?) after Test because of possible Divide by 0
@@ -43,6 +44,7 @@
             if (currentHitPoints <= 0) isDead = true;
         }
 
+        // Code Smell 2 --> doppelter Code (siehe Structure.cs)
         public void HealDamage(int amount)
         {           
             currentHitPoints = currentHitPoints + amount;
