@@ -104,12 +104,17 @@ namespace xUnit.Tests
             //int initialHitPoints = entity.currentHitPoints;
             //int maxHitPoints = entity.maxHitPoints;
             //int healAmount = maxHitPoints - initialHitPoints + 1;
+            var fakePosition = A.Fake<Position>();
+            var entity = new TestableEntity(fakePosition);
+            int initialHitPoints = entity.currentHits;
+            int maxHitPoints = entity.maxHits;
+            int healAmount = maxHitPoints - initialHitPoints + 1;
 
             // Act
-            //entity.HealDamage(healAmount);
+            entity.HealDamage(healAmount);
 
             // Assert
-            //entity.currentHitPoints.Should().Be(maxHitPoints);
+            entity.currentHits.Should().Be(maxHitPoints);
         }
 
         [Fact]
