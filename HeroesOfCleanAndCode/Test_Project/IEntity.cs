@@ -1,6 +1,6 @@
 ﻿namespace HeroesOfCleanAndCode
 {
-    interface IEntity : Heal
+    interface IEntity 
     {
         int maxHitPoints { get; }
         int currentHitPoints { get; }

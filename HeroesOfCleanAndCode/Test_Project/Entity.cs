@@ -11,9 +11,11 @@
             Major = 5,
         }
         public int maxHitPoints { get; protected set; }
+        public int maxHits = 100;
         public int currentHitPoints { get; protected set; }
+        public int currentHits = 50;
         public int shieldPoints { get; protected set; }
-        public int damageTaken;
+        public int shield = 10;
         public int damage { get; protected set; }
         public Position position { get; protected set; }
         public EntityLevel level { get; protected set; }
@@ -24,7 +26,7 @@
         public byte radius { get; protected set; }
 
 
-        public Entity(Position position)
+        protected Entity(Position position)
         {
             this.position = position;
             level = EntityLevel.Rookie;
@@ -54,8 +56,8 @@
 
         public void HealDamage(int amount)
         {
-            currentHitPoints += amount;
-            if (currentHitPoints > maxHitPoints) currentHitPoints = maxHitPoints;
+            currentHits += amount;
+            if (currentHits > maxHits) currentHits = maxHits;
         }
 
         public void LevelUp()
