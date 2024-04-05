@@ -16,11 +16,12 @@ namespace xUnit.Tests
 {
     public class TestableEntity : Entity // Erstellen einer abgeleiteten Klasse für Tests
     {
-        public TestableEntity(Position position) : base(position)
+        public TestableEntity(Position position, int initialHitPoints, int initialShieldPoints, int intitialMaxHitPoints) : base(position)
         {
+            currentHitPoints = initialHitPoints;
+            shieldPoints = initialShieldPoints;
+            maxHitPoints = intitialMaxHitPoints;
         }
-
-        // Hier können Sie zusätzliche Methoden hinzufügen, um den Zugriff auf die geschützten Elemente zu erleichtern, falls erforderlich.
     }
 
     public class EntityTests
@@ -35,7 +36,7 @@ namespace xUnit.Tests
         {
             // Arrange
             var fakePosition = A.Fake<Position>(); // Erstellen eines gefälschten Position-Objekts mit FakeItEasy
-            var entity = new TestableEntity(fakePosition);
+            var entity = new TestableEntity(fakePosition, 100, 20, 100);
             int initialHitPoints = entity.currentHitPoints;
             int damageAmount = 20;
 
@@ -43,13 +44,13 @@ namespace xUnit.Tests
             entity.TakeDamage(damageAmount);
 
             // Assert
-            if (entity.shieldPoints > 0)
+            if (entity.shieldPoints != 0)
             {
                 entity.currentHitPoints.Should().Be(initialHitPoints - damageAmount / entity.shieldPoints);
             }
             else
             {
-                entity.currentHitPoints.Should().Be(initialHitPoints - damageAmount);
+                entity.currentHitPoints.Should().Be(initialHitPoints - damageAmount);                
             }
         }
 
@@ -58,11 +59,11 @@ namespace xUnit.Tests
         {
             // Arrange
             var fakePosition = A.Fake<Position>(); // Erstellen eines gefälschten Position-Objekts mit FakeItEasy
-            var entity = new TestableEntity(fakePosition);
-            int initialHitPoints = entity.currentHitPoints;
+            var entity = new TestableEntity(fakePosition, 10, 0, 100);
+            int damageAmount = 20;
 
             // Act
-            entity.TakeDamage(initialHitPoints * entity.shieldPoints);
+            entity.TakeDamage(damageAmount);
 
             // Assert
             entity.isDead.Should().BeTrue();
@@ -73,48 +74,31 @@ namespace xUnit.Tests
         {
             // Arrange
             var fakePosition = A.Fake<Position>();
-            var entity = new TestableEntity(fakePosition);
-            int initialHitPoints = entity.currentHits;
-            int maxHitPoints = entity.maxHits;
-            int healAmount = maxHitPoints - initialHitPoints;            
-
-
-            // Mittels FakeItEasy Simulieren, dass die aktuellen Trefferpunkte zuerst auf einen bestimmten Wert gesetzt wurden
-            //A.CallTo(() => entity.currentHitPoints).Returns(initialCurrentHitPoints);
-
-            //A.CallTo(() => entity.maxHitPoints).Returns(MaximumHitPoints);
+            var entity = new TestableEntity(fakePosition, 60, 0, 100);
+            int initialHitPoints = entity.currentHitPoints;
+            int healAmount = 20;
 
             // Act
             entity.HealDamage(healAmount);
 
             // Assert
-            //entity.currentHitPoints.Should().Be(initialHitPoints + healAmount);
-            entity.currentHits.Should().Be(initialHitPoints + healAmount);
-            //A.CallTo(() => entity.currentHitPoints).MustHaveHappenedOnceExactly();
-            //A.CallTo(() => entity.currentHitPoints).Where(args => args.GetArgument<int>(0) == 80).MustHaveHappenedOnceExactly();
+            entity.currentHitPoints.Should().Be(initialHitPoints + healAmount);
         }
-   
 
         [Fact]
         public void HealDamage_Should_Set_CurrentHitPoints_To_MaxHitPoints_When_CurrentHitPoints_Is_Above_MaxHitPoints()
         {
             // Arrange
-            //var fakePosition = A.Fake<Position>(); // Erstellen eines gefälschten Position-Objekts mit FakeItEasy
-            //var entity = new Entity(fakePosition);
-            //int initialHitPoints = entity.currentHitPoints;
-            //int maxHitPoints = entity.maxHitPoints;
-            //int healAmount = maxHitPoints - initialHitPoints + 1;
             var fakePosition = A.Fake<Position>();
-            var entity = new TestableEntity(fakePosition);
-            int initialHitPoints = entity.currentHits;
-            int maxHitPoints = entity.maxHits;
-            int healAmount = maxHitPoints - initialHitPoints + 1;
+            var entity = new TestableEntity(fakePosition, 100, 0, 100);
+            int maxHitPoints = entity.maxHitPoints;
+            int healAmount = 20;
 
             // Act
             entity.HealDamage(healAmount);
 
             // Assert
-            entity.currentHits.Should().Be(maxHitPoints);
+            entity.currentHitPoints.Should().Be(maxHitPoints);
         }
 
         [Fact]

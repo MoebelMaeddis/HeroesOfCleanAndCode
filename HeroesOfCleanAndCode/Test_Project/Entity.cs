@@ -13,9 +13,7 @@
         public int maxHitPoints { get; protected set; }
         public int maxHits = 100;
         public int currentHitPoints { get; protected set; }
-        public int currentHits = 50;
         public int shieldPoints { get; protected set; }
-        public int shield = 10;
         public int damage { get; protected set; }
         public Position position { get; protected set; }
         public EntityLevel level { get; protected set; }
@@ -42,7 +40,7 @@
         public void TakeDamage(int amount)
         {
             // Refactoring (?) after Test because of possible Divide by 0
-            if (shieldPoints > 0)
+            if (shieldPoints != 0)
             {
                 currentHitPoints -= amount / shieldPoints;
             }
@@ -56,8 +54,8 @@
 
         public void HealDamage(int amount)
         {
-            currentHits += amount;
-            if (currentHits > maxHits) currentHits = maxHits;
+            currentHitPoints += amount;
+            if (currentHitPoints > maxHits) currentHitPoints = maxHitPoints;
         }
 
         public void LevelUp()
