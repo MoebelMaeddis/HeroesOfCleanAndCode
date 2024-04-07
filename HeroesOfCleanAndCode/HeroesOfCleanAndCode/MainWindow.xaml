@@ -35,7 +35,7 @@
                          RenderOptions.BitmapScalingMode="HighQuality">
                 <UniformGrid.Resources>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Margin" Value="2"/>
+                        <Setter Property="Margin" Value="0"/>
                     </Style>
                 </UniformGrid.Resources>
             </UniformGrid>

@@ -37,7 +37,7 @@ namespace HeroesOfCleanAndCode
         public MainWindow()
         {
             InitializeComponent();
-            game = new Game(Difficulty.Medium, 2, MapSize.Small, MapRelation.Double);
+            game = new Game(Difficulty.Medium, 2, MapSize.Large, MapRelation.Double);
             gridImages = SetupEmptyMap();
         }
 
