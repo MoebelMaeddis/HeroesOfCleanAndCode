@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,10 @@
     <None Remove="Assets\Images\Grass.png" />
     <None Remove="Assets\Images\Mountain.png" />
     <None Remove="Assets\Images\Ore.png" />
+    <None Remove="Assets\Images\PBlue.png" />
+    <None Remove="Assets\Images\PGreen.png" />
+    <None Remove="Assets\Images\PRed.png" />
+    <None Remove="Assets\Images\raw.svg" />
     <None Remove="Assets\Images\River.png" />
     <None Remove="Assets\Images\Water.png" />
   </ItemGroup>
@@ -22,13 +27,39 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Images\Empty.png" />
-    <Resource Include="Assets\Images\Forest.png" />
-    <Resource Include="Assets\Images\Grass.png" />
-    <Resource Include="Assets\Images\Mountain.png" />
-    <Resource Include="Assets\Images\Ore.png" />
-    <Resource Include="Assets\Images\River.png" />
-    <Resource Include="Assets\Images\Water.png" />
+    <Resource Include="Assets\Images\Empty.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Forest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Grass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Mountain.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Ore.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\PBlue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\PGreen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\PRed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\raw.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\River.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Water.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
