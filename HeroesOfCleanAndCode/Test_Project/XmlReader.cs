@@ -10,13 +10,6 @@ namespace HeroesOfCleanAndCode
         private string url { get; }
         public XmlDocument xmlDocument { get; }
 
-        /*public XmlReader(string url)
-        {
-            this.url = url;
-            xmlDocument = new XmlDocument();
-            xmlDocument.Load(this.url);
-        }*/
-
         public interface IXmlLoader
         {
             string LoadXmlFromUrl(string url);
@@ -28,8 +21,6 @@ namespace HeroesOfCleanAndCode
             xmlDocument = new XmlDocument();
             string xmlContent = xmlLoader.LoadXmlFromUrl(url);
             xmlDocument.LoadXml(xmlContent);
-        }
-        
-
+        }    
     }
 }
