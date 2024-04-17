@@ -7,9 +7,12 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using FakeItEasy;
-using System.Reflection.Metadata; //Mocking Framework
-using HeroesOfCleanAndCode;
+using FakeItEasy; //Mocking Framework
+using System.Reflection.Metadata;
+using HeroesOfCleanAndCode.Model.Entities;
+using HeroesOfCleanAndCode.Model.Helper;
+using HeroesOfCleanAndCode.Model.Enums;
+using HeroesOfCleanAndCode.Interfaces;
 using System.Runtime.InteropServices;
 
 namespace UnitTests
