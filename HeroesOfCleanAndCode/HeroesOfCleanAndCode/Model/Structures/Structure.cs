@@ -23,7 +23,14 @@ namespace HeroesOfCleanAndCode.Model.Structures
 
         public void TakeDamage(int damage)
         {
-            currentHitPoints -= damage / shieldPoints;
+            if (shieldPoints != 0)
+            {
+                currentHitPoints -= damage / shieldPoints;
+            }
+            else
+            {
+                currentHitPoints -= damage;
+            }
             if (currentHitPoints <= 0) 
             {
                 isDestroyed = true;

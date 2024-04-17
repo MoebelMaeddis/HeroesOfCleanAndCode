@@ -34,7 +34,14 @@ namespace HeroesOfCleanAndCode.Model.Entities
 
         public void TakeDamage(int amount)
         {
-            currentHitPoints -= amount / shieldPoints;
+            if (shieldPoints != 0)
+            {
+                currentHitPoints -= amount / shieldPoints;
+            }
+            else
+            {
+                currentHitPoints -= amount;
+            }
             if (currentHitPoints <= 0) isDead = true;
         }
 
