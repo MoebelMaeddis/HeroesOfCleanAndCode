@@ -5,7 +5,29 @@ using System.Xml;
 
 namespace HeroesOfCleanAndCode.Assets.Config
 {
-    internal class XmlReader
+    public class XmlReader
+    {
+        private string url { get; }
+        public XmlDocument xmlDocument { get; }
+
+        public interface IXmlLoader
+        {
+            string LoadXmlFromUrl(string url);
+        }
+
+        public XmlReader(string url, IXmlLoader xmlLoader)
+        {
+            this.url = url;
+            xmlDocument = new XmlDocument();
+            string xmlContent = xmlLoader.LoadXmlFromUrl(this.url);
+            xmlDocument.LoadXml(xmlContent);
+        }
+    }
+}
+
+// old 
+/*
+internal class XmlReader
     {
         private string url { get; }
         private XmlDocument xmlDocument { get; }
@@ -17,4 +39,4 @@ namespace HeroesOfCleanAndCode.Assets.Config
             xmlDocument.Load(this.url);
         }
     }
-}
+*/
