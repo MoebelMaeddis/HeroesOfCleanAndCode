@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HeroesOfCleanAndCode.App" Collapsed="true">
+    <Position X="20.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>App.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.MainWindow" Collapsed="true">
+    <Position X="18.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FastNoiseLite" Collapsed="true">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="FastNoiseLite.NoiseType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.RotationType3D" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.FractalType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.CellularDistanceFunction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.CellularReturnType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.DomainWarpType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.TransformType3D" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>2ACYQKBADoIj0ChhCZQCyMAggiiIgAACnCYAICYAImQ=</HashCode>
+      <FileName>Model\Helper\FastNoiseLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Universal" Collapsed="true">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Universal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Styles" Collapsed="true">
+    <Position X="7.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAAAAAAQAAAAAAAAAAAAAAAEBAAgIAQAAAgAAAA=</HashCode>
+      <FileName>View\Styles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Helper.Position" Collapsed="true">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAABkAAAAAiA=</HashCode>
+      <FileName>Model\Helper\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Helper.EnumDataHelper" Collapsed="true">
+    <Position X="9" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Helper\EnumDataHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Core.Game" Collapsed="true">
+    <Position X="15.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Model\Core\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Entity" Collapsed="true">
+    <Position X="13.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACYAAgAAAAAAAIAABAFEQAAAAAAAAoAAQAAA=</HashCode>
+      <FileName>Model\Entities\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Structures.Structure" Collapsed="true">
+    <Position X="13.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAAAAAAAAAIAAAAEAAAAAAAAAAoAAQwAA=</HashCode>
+      <FileName>Model\Structures\Structure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Terrain" Collapsed="true">
+    <Position X="13.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Terrain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Controller.Info.InfoController" Collapsed="true">
+    <Position X="15.75" Y="6.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="HeroesOfCleanAndCode.Controller.Info.InfoController.InfoNextButtonOption" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controller\Info\InfoController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="HeroesOfCleanAndCode.Controller.Info.InfoController.InfoEntityLabelOptions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controller\Info\InfoController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="View" Type="HeroesOfCleanAndCode.View.Info.InfoView" FixedFromPoint="true">
+      <Path>
+        <Point X="17.25" Y="6.875" />
+        <Point X="18.25" Y="6.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Controller\Info\InfoController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Controller.Main.MainController" Collapsed="true">
+    <Position X="15.75" Y="5.75" Width="1.5" />
+    <AssociationLine Name="View" Type="HeroesOfCleanAndCode.View.Main.MainView" FixedFromPoint="true">
+      <Path>
+        <Point X="17.25" Y="5.875" />
+        <Point X="18.25" Y="5.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Main\MainController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Controller.Map.MapController" Collapsed="true">
+    <Position X="15.75" Y="7.75" Width="1.5" />
+    <AssociationLine Name="View" Type="HeroesOfCleanAndCode.View.Map.MapView" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="7.875" />
+        <Point X="18.25" Y="7.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>RAAAAAAAAAAAAAAAABAAAAAAAAIBAAAAEAAAQAAAAAA=</HashCode>
+      <FileName>Controller\Map\MapController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Info.InfoView" Collapsed="true">
+    <Position X="18.25" Y="6.75" Width="1.5" />
+    <AssociationLine Name="Controller" Type="HeroesOfCleanAndCode.Controller.Info.InfoController" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="7.188" />
+        <Point X="17.25" Y="7.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEQAIAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Info\InfoView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Controller" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Main.MainView" Collapsed="true">
+    <Position X="18.25" Y="5.75" Width="1.5" />
+    <AssociationLine Name="Controller" Type="HeroesOfCleanAndCode.Controller.Main.MainController" FixedFromPoint="true">
+      <Path>
+        <Point X="18.25" Y="6.125" />
+        <Point X="17.25" Y="6.125" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Main\MainView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Controller" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Map.MapView" Collapsed="true">
+    <Position X="18.25" Y="7.75" Width="1.5" />
+    <AssociationLine Name="Controller" Type="HeroesOfCleanAndCode.Controller.Map.MapController" FixedFromPoint="true">
+      <Path>
+        <Point X="18.25" Y="8.125" />
+        <Point X="17.25" Y="8.125" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAIAAAAAAAAAAAAAABAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>View\Map\MapView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Controller" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Assets.Config.XmlReader" Collapsed="true">
+    <Position X="9" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Config\XmlReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.IEntity" Collapsed="true">
+    <Position X="11.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACYAAgAAAAAAAIAABAFEQAAAAAAAAoAAQAAA=</HashCode>
+      <FileName>Interfaces\IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.IStructure" Collapsed="true">
+    <Position X="11.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAAAAAAAAAIAAAAEAAAAAAAAAAoAAQwAA=</HashCode>
+      <FileName>Interfaces\IStructure.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.ITerrain" Collapsed="true">
+    <Position X="11.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ITerrain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

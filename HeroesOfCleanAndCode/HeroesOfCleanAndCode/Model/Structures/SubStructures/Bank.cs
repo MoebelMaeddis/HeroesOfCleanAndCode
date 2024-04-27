@@ -2,14 +2,14 @@
 
 namespace HeroesOfCleanAndCode.Model.Structures.SubStructures
 {
-    class University : Structure
+    class Bank : Structure
     {
-        public University(Position position) : base(position)
+        public Bank(Position position) : base(position)
         {
             maxHitPoints = 500;
             currentHitPoints = maxHitPoints;
-            moneyIncome = -200;
-            scienceIncome = 100;
+            moneyIncome = 2000;
+            scienceIncome = 0;
         }
     }
 }

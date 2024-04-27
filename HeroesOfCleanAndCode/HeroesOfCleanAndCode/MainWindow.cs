@@ -1,13 +1,13 @@
 using System.Windows;
-using System.Windows.Controls;
 using HeroesOfCleanAndCode.View.Main;
 using HeroesOfCleanAndCode.Interfaces;
+using HeroesOfCleanAndCode.Model.Core;
 
 namespace HeroesOfCleanAndCode
 {
     public partial class MainWindow : Window, IView
     {
-        private readonly Image[,] gameGridImages;
+
         public MainWindow()
         {
             WindowState = WindowState.Maximized;

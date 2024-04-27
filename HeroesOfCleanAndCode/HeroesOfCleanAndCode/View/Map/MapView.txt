@@ -1,0 +1,62 @@
+﻿using static HeroesOfCleanAndCode.Controller.Map.MapController;
+using HeroesOfCleanAndCode.Controller.Map;
+using HeroesOfCleanAndCode.Interfaces;
+using System.Windows.Controls;
+using System;
+using HeroesOfCleanAndCode.Assets.Images;
+using System.Windows.Media;
+
+namespace HeroesOfCleanAndCode.View.Map
+{
+
+    public class MapView : Grid, IView
+    {
+        public MapController Controller { get; private set; }
+
+        public MapView()
+        {
+            Controller = new MapController(this);
+
+            InitLayout();
+        }
+
+        public void InitLayout()
+        {
+            InitGrid();
+
+            InitMap();
+        }
+
+        private void InitGrid()
+        {
+            HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            VerticalAlignment = System.Windows.VerticalAlignment.Center;
+
+            Universal.GridDefinitions(this, Tuple.Create(Controller.mapSizeX, Controller.mapSizeY));
+        }
+
+        public void InitMap()
+        {
+            InitMapImages();
+        }
+
+        private void InitMapImages()
+        {
+            for (int x = 0; x < Controller.mapSizeX; x++)
+            {
+                for (int y = 0; y < Controller.mapSizeY; y++)
+                {
+                    Label label = new Label();
+                    label.BorderBrush = System.Windows.Media.Brushes.Black;
+                    label.BorderThickness = new System.Windows.Thickness(1);
+                    label.Background = new ImageBrush(Images.Mountain);
+
+                    Grid.SetColumn(label, x);
+                    Grid.SetRow(label, y);
+
+                    this.Children.Add(label);
+                }
+            }
+        }
+    }
+}

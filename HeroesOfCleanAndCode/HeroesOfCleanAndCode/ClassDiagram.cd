@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HeroesOfCleanAndCode.Assets.Images.Images">
+    <Position X="32.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAABAAACAAAIAAIAAAAAAAAgAAAgAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Images\Images.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Assets.Config.XmlReader">
+    <Position X="32.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Config\XmlReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Artillery" Collapsed="true">
+    <Position X="21.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entities\Artillery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Aviated" Collapsed="true">
+    <Position X="21.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entities\Aviated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Builder" Collapsed="true">
+    <Position X="21.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entities\Builder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Entity">
+    <Position X="19.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACYAAgAAAAAAAIAABAFEQAAAAAAAAoAAQAAA=</HashCode>
+      <FileName>Model\Entities\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Heavy" Collapsed="true">
+    <Position X="21.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entities\Heavy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Infantery" Collapsed="true">
+    <Position X="21.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entities\Infantery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Entities.Medic" Collapsed="true">
+    <Position X="21.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Entities\Medic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Core.Game">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Model\Core\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="difficulty" />
+      <Property Name="map" />
+      <Property Name="players" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Core.Map">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAgAAAAAAAAAACAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Model\Core\Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="mapSize" />
+      <Property Name="mapRelation" />
+      <Property Name="terrainMap" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Core.Player">
+    <Position X="18" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAgAQCAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Core\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="structures" />
+      <Property Name="entities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Structures.SubStructures.Bank">
+    <Position X="21.75" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Structures\SubStructures\Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Structures.City">
+    <Position X="21.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Structures\City.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="subStructures" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Structures.Structure">
+    <Position X="19.25" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAAAAAAAAAIAAAAEAAAAAAAAAAoAAQwAA=</HashCode>
+      <FileName>Model\Structures\Structure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Forest" Collapsed="true">
+    <Position X="25.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Forest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Grass" Collapsed="true">
+    <Position X="25.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Grass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Mountain" Collapsed="true">
+    <Position X="25.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Mountain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Ore" Collapsed="true">
+    <Position X="25.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Ore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.River" Collapsed="true">
+    <Position X="25.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\River.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Terrain">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Terrain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Terrains.Water" Collapsed="true">
+    <Position X="25.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Terrains\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Helper.Direction">
+    <Position X="32.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgIAAAAAAAAAgAAAAAAAAAAAAIAACACwIAABAiI=</HashCode>
+      <FileName>Model\Helper\Direction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Helper.EnumDataHelper">
+    <Position X="32.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Helper\EnumDataHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Model.Helper.Position">
+    <Position X="24.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAABkAAAAAiA=</HashCode>
+      <FileName>Model\Helper\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastNoiseLite">
+    <Position X="30.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="FastNoiseLite.NoiseType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.RotationType3D" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.FractalType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.CellularDistanceFunction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.CellularReturnType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.DomainWarpType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="FastNoiseLite.TransformType3D" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Helper\FastNoiseLite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>2ACYQKBADoIj0ChhCZQCyMAggiiIgAACnCYAICYAImQ=</HashCode>
+      <FileName>Model\Helper\FastNoiseLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Main.MainView" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Main\MainView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Controller" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Info.InfoView" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEQAIAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Info\InfoView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Controller" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Map.MapView" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAIAAAAAAAAAAAAAABAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>View\Map\MapView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Controller" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Styles">
+    <Position X="34" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAAAAAAQAAAAAAAAAAAAAAAEBAAgIAQAAAgAAAA=</HashCode>
+      <FileName>View\Styles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.View.Universal">
+    <Position X="34" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Universal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Controller.Info.InfoController">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="HeroesOfCleanAndCode.Controller.Info.InfoController.InfoNextButtonOption">
+        <TypeIdentifier>
+          <NewMemberFileName>Controller\Info\InfoController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="HeroesOfCleanAndCode.Controller.Info.InfoController.InfoEntityLabelOptions">
+        <TypeIdentifier>
+          <NewMemberFileName>Controller\Info\InfoController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Controller\Info\InfoController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Controller.Map.MapController">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAAAAAAAAAAAAAAABAAAAAAAAIBAAAAEAAAQAAAAAA=</HashCode>
+      <FileName>Controller\Map\MapController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Controller.Main.MainController">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Main\MainController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.App">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>App.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.Globals">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAABAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Globals.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HeroesOfCleanAndCode.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.IEntity">
+    <Position X="19.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACYAAgAAAAAAAIAABAFEQAAAAAAAAoAAQAAA=</HashCode>
+      <FileName>Interfaces\IEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="position" />
+      <Property Name="level" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.IStructure">
+    <Position X="19.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAAAAAAAAAIAAAAEAAAAAAAAAAoAAQwAA=</HashCode>
+      <FileName>Interfaces\IStructure.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="position" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.ITerrain">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ITerrain.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="mobilityCost" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="HeroesOfCleanAndCode.Interfaces.IView">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="HeroesOfCleanAndCode.Model.Enums.Difficulty">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAAAAAAEAAAAAAAAAAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>Model\Enums\Difficulty.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HeroesOfCleanAndCode.Model.Enums.EntityLevel">
+    <Position X="21.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAgAACAAAQ=</HashCode>
+      <FileName>Model\Enums\EntityLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HeroesOfCleanAndCode.Model.Enums.MapRelation">
+    <Position X="20.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Model\Enums\MapRelation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HeroesOfCleanAndCode.Model.Enums.MapSize">
+    <Position X="20.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAABAEAAA=</HashCode>
+      <FileName>Model\Enums\MapSize.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HeroesOfCleanAndCode.Model.Enums.MobilityCost">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAEACA=</HashCode>
+      <FileName>Model\Enums\MobilityCost.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

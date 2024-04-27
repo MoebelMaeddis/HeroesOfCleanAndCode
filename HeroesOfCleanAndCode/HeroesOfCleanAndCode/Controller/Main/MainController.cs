@@ -1,4 +1,5 @@
-﻿using HeroesOfCleanAndCode.View.Main;
+﻿using HeroesOfCleanAndCode.Model.Core;
+using HeroesOfCleanAndCode.View.Main;
 
 namespace HeroesOfCleanAndCode.Controller.Main
 {

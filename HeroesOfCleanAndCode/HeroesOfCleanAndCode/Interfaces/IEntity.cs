@@ -1,4 +1,5 @@
 ﻿using HeroesOfCleanAndCode.Model.Helper;
+using HeroesOfCleanAndCode.Model.Enums;
 
 namespace HeroesOfCleanAndCode.Interfaces
 {
@@ -9,6 +10,7 @@ namespace HeroesOfCleanAndCode.Interfaces
         int shieldPoints { get; }
         int damage { get; }
         Position position { get; }
+        EntityLevel level { get; }
         int cost { get; }
         bool isDead { get; }
 

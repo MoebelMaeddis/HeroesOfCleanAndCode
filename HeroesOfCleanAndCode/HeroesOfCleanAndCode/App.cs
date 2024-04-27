@@ -1,9 +1,11 @@
-﻿using System;
+﻿using HeroesOfCleanAndCode.Model.Core;
+using HeroesOfCleanAndCode.Model.Enums;
+using System;
 using System.Windows;
 
 namespace HeroesOfCleanAndCode
 {
-    public class App
+    public partial class App : Application
     {
 
         [STAThread]

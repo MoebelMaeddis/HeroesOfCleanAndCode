@@ -6,7 +6,7 @@ namespace HeroesOfCleanAndCode.Model.Structures
 {
     class City : Structure
     {
-        private List<SubStructure> subStructures { get; set; }
+        private List<Structure> subStructures { get; set; }
         public City(Position position) : base(position)
         {
             maxHitPoints = 1000;
@@ -14,7 +14,7 @@ namespace HeroesOfCleanAndCode.Model.Structures
             shieldPoints = 10;
             moneyIncome = 1000;
             scienceIncome = 0;
-            subStructures = new List<SubStructure>();
+            subStructures = new List<Structure>();
         }
     }
 }

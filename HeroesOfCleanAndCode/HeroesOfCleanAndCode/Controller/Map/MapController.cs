@@ -1,14 +1,21 @@
-﻿using System;
-using System.Windows.Media;
-using System.Collections.Generic;
-using HeroesOfCleanAndCode.View.Map;
-using HeroesOfCleanAndCode.Assets.Images;
+﻿using static HeroesOfCleanAndCode.Globals;
 using HeroesOfCleanAndCode.Model.Terrains;
+using HeroesOfCleanAndCode.Assets.Images;
+using HeroesOfCleanAndCode.View.Map;
+using System.Collections.Generic;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System;
+
 
 namespace HeroesOfCleanAndCode.Controller.Map
 {
     public class MapController
     {
+        public readonly Image[,] mapImages;
+        public Image[,] EntityImages;
+        public readonly int mapSizeX, mapSizeY;
+
         private readonly Dictionary<Type, ImageSource> terrainToImage = new()
         {
             {typeof(Forest), Images.Forest},
@@ -22,7 +29,41 @@ namespace HeroesOfCleanAndCode.Controller.Map
 
         public MapController(MapView view)
         {
+            mapSizeY = (int)game.map.mapSize;
+            mapSizeX = mapSizeY * (int)game.map.mapRelation;
+
+            mapImages = InitMapImages();
+
             View = view;
+        }
+
+        public Image[,] InitMapImages()
+        {
+            Image[,] images = new Image[mapSizeX, mapSizeY];
+
+            for (int y = 0; y < mapSizeY; y++)
+            {
+                for (int x = 0; x < mapSizeX; x++)
+                {
+                    Image image = new Image
+                    {
+                        Source = Images.Empty,
+                    };
+                    images[x, y] = image;
+                }
+            }
+            return images;
+        }
+
+        public void UpdateMap()
+        {
+            for (int y = 0; y < mapSizeY; y++)
+            {
+                for (int x = 0; x < mapSizeX; x++)
+                {
+                    mapImages[x, y].Source = terrainToImage[game.map.terrainMap[x, y].GetType()];
+                }
+            }
         }
     }
 }

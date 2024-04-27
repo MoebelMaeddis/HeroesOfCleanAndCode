@@ -1,14 +1,23 @@
 ﻿using HeroesOfCleanAndCode.View.Info;
-using static HeroesOfCleanAndCode.Controller.Main.MainController;
 
 namespace HeroesOfCleanAndCode.Controller.Info
 {
     public class InfoController
     {
-        public enum ButtonOption
+        public enum InfoNextButtonOption
         {
-            NextEntity,
-            NextAction,
+            Entity,
+            Action,
+        }
+
+        public enum InfoEntityLabelOptions
+        {
+            Name,
+            Health,
+            Damage,
+            Armor,
+            Speed,
+            Range,
         }
 
         public InfoView View { get; private set; }
@@ -17,13 +26,13 @@ namespace HeroesOfCleanAndCode.Controller.Info
         {
             View = view;
         }
-        public void InfoButtonClicked(ButtonOption option)
+        public void InfoButtonClicked(InfoNextButtonOption option)
         {
             switch (option)
             {
-                case ButtonOption.NextEntity:
+                case InfoNextButtonOption.Entity:
                     break;
-                case ButtonOption.NextAction:
+                case InfoNextButtonOption.Action:
                     break;
             }
         }
