@@ -32,23 +32,16 @@ namespace HeroesOfCleanAndCode.Model.Entities
             position.Translate(direction);
         }
 
-        public void TakeDamage(int amount)
+        public void TakeDamage(int damage)
         {
-            if (shieldPoints != 0)
-            {
-                currentHitPoints -= amount / shieldPoints;
-            }
-            else
-            {
-                currentHitPoints -= amount;
-            }
-            if (currentHitPoints <= 0) isDead = true;
+            currentHitPoints = DamageableSystem.TakeDamage(damage, currentHitPoints, shieldPoints);
+
+            isDead = currentHitPoints == 0 ? true : false;
         }
 
-        public void HealDamage(int amount)
+        public void HealDamage(int points)
         {
-            currentHitPoints += amount;
-            if (currentHitPoints > maxHitPoints) currentHitPoints = maxHitPoints;
+            if (!isDead) currentHitPoints = DamageableSystem.HealDamage(currentHitPoints, maxHitPoints);
         }
 
         public void LevelUp()

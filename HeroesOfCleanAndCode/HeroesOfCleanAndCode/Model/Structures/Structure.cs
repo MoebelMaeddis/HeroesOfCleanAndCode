@@ -23,29 +23,14 @@ namespace HeroesOfCleanAndCode.Model.Structures
 
         public void TakeDamage(int damage)
         {
-            if (shieldPoints != 0)
-            {
-                currentHitPoints -= damage / shieldPoints;
-            }
-            else
-            {
-                currentHitPoints -= damage;
-            }
-            if (currentHitPoints <= 0) 
-            {
-                isDestroyed = true;
-                currentHitPoints = 0;
-            }
+            currentHitPoints = DamageableSystem.TakeDamage(damage, currentHitPoints, shieldPoints);
+
+            isDestroyed = currentHitPoints = 0 ? true : false;
         }
 
         public void HealDamage(int points)
         {
-            if (isDestroyed == false)
-            {
-                currentHitPoints += points;
-                if (currentHitPoints > maxHitPoints)
-                    currentHitPoints = maxHitPoints;
-            }
+            if (!isDestroyed) currentHitPoints = DamageableSystem.HealDamage(currentHitPoints, maxHitPoints);
         }
     }
 }
