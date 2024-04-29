@@ -39,7 +39,7 @@ namespace HeroesOfCleanAndCode.Model.Entities
             isDead = currentHitPoints == 0 ? true : false;
         }
 
-        public void HealDamage(int points)
+        public void HealDamage()
         {
             if (!isDead) currentHitPoints = DamageableSystem.HealDamage(currentHitPoints, maxHitPoints);
         }

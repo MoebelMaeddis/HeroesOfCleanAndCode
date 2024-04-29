@@ -7,26 +7,24 @@ namespace HeroesOfCleanAndCode
     {
         private static Globals instance = null;
         private static readonly object padlock = new object();
-        public static Game game { get; set; }
+        public Game game { get; set; }
 
-        Globals()
-        {
-            game = new Game(Difficulty.Easy, 2, MapSize.Tiny, MapRelation.Double);
-        }
+        Globals() { }
 
-        public static Globals Instance
+        public static Globals Instance()
         {
-            get
+            if (instance == null)
             {
                 lock (padlock)
                 {
                     if (instance == null)
                     {
                         instance = new Globals();
+                        instance.game = new Game(Difficulty.Easy, 2, MapSize.Tiny, MapRelation.Double);
                     }
-                    return instance;
                 }
             }
+            return instance;
         }
     }
 }

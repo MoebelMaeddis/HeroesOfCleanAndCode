@@ -43,7 +43,7 @@ namespace HeroesOfCleanAndCode.View.Map
             RenderOptions.SetBitmapScalingMode(this, BitmapScalingMode.HighQuality);
 
             Style imageStyle = new Style(typeof(Image));
-            imageStyle.Setters.Add(new Setter(Image.MarginProperty, new Thickness(0)));
+            imageStyle.Setters.Add(new Setter(Image.MarginProperty, new Thickness(1)));
             Resources.Add(typeof(Image), imageStyle);
         }
 
@@ -54,11 +54,19 @@ namespace HeroesOfCleanAndCode.View.Map
 
         public void InitMapImages()
         {
+            Controller.UpdateMap();
+
             for (int y = 0; y < Controller.mapSizeY; y++)
             {
                 for (int x = 0; x < Controller.mapSizeX; x++)
                 {
-                    this.Children.Add(Controller.EntityImages[x, y]);
+                    this.Children.Add(
+                        new Border() {
+                            BorderThickness = new Thickness(1),
+                            BorderBrush = Brushes.Black,
+                            Background = new ImageBrush(Controller.mapImages[x, y].Source)
+                        }
+                    );
                 }
             }
         }

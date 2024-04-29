@@ -14,6 +14,6 @@ namespace HeroesOfCleanAndCode.Interfaces
 
 
         void TakeDamage(int damage);
-        void HealDamage(int points);
+        void HealDamage();
     }
 }

@@ -28,39 +28,39 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Images\Empty.png">
+    <EmbeddedResource Include="Assets\Images\Empty.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\Forest.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Forest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\Grass.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Grass.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\Mountain.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Mountain.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\Ore.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Ore.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\PBlue.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\PBlue.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\PGreen.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\PGreen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\PRed.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\PRed.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\raw.svg">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\raw.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\River.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\River.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Images\Water.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Water.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

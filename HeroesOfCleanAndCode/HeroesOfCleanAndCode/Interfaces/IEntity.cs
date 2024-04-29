@@ -20,7 +20,7 @@ namespace HeroesOfCleanAndCode.Interfaces
 
         void Move(Direction direction);
         void TakeDamage(int amount);
-        void HealDamage(int amount);
+        void HealDamage();
         void LevelUp();
     }
 }

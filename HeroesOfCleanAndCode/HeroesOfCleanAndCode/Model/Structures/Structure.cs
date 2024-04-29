@@ -25,10 +25,10 @@ namespace HeroesOfCleanAndCode.Model.Structures
         {
             currentHitPoints = DamageableSystem.TakeDamage(damage, currentHitPoints, shieldPoints);
 
-            isDestroyed = currentHitPoints = 0 ? true : false;
+            isDestroyed = currentHitPoints == 0 ? true : false;
         }
 
-        public void HealDamage(int points)
+        public void HealDamage()
         {
             if (!isDestroyed) currentHitPoints = DamageableSystem.HealDamage(currentHitPoints, maxHitPoints);
         }

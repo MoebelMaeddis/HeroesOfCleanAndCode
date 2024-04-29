@@ -1,7 +1,6 @@
 using System.Windows;
 using HeroesOfCleanAndCode.View.Main;
 using HeroesOfCleanAndCode.Interfaces;
-using HeroesOfCleanAndCode.Model.Core;
 
 namespace HeroesOfCleanAndCode
 {
@@ -12,6 +11,8 @@ namespace HeroesOfCleanAndCode
         {
             WindowState = WindowState.Maximized;
             Title = "Heroes of Clean and Code";
+
+            //Globals.Instance;
 
             InitLayout();
         }
