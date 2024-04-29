@@ -62,7 +62,6 @@ namespace xUnit.Tests
             downRightDirection.yOffset.Should().Be(1);
         }
 
-        // Testen der Gleichheitsoperatoren (operator == und operator !=):
         [Fact]
         public void Directions_Should_Have_Correct_Equality()
         {
@@ -76,7 +75,6 @@ namespace xUnit.Tests
             direction1.Should().Be(direction3);
         }
 
-        // Testen der Equals-Methode:
         [Fact]
         public void Directions_Should_Have_Correct_Equals_Method()
         {
@@ -90,7 +88,6 @@ namespace xUnit.Tests
             direction1.Equals(direction3).Should().BeTrue();
         }
 
-        // Testen der GetHashCode-Methode:
         [Fact]
         public void Directions_Should_Have_Unique_Hash_Codes()
         {

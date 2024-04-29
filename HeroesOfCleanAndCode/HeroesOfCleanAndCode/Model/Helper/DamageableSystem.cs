@@ -4,7 +4,7 @@
     {
         public static int TakeDamage(int damage, int currentHitPoints, int shieldPoints)
         {
-            shieldPoints = shieldPoints > 0 ? 1 : shieldPoints;
+            shieldPoints = shieldPoints < 1 ? 1 : shieldPoints;
 
             int newHitPoints = currentHitPoints - (int)(damage / shieldPoints);
 

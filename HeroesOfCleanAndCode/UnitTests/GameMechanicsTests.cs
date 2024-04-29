@@ -7,7 +7,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using FakeItEasy; //Mocking Framework
+using FakeItEasy;
 using System.Reflection.Metadata;
 using HeroesOfCleanAndCode.Model.Entities;
 using HeroesOfCleanAndCode.Model.Helper;
@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 
 namespace UnitTests
 {
-    public class TestableEntity : Entity // Erstellen einer abgeleiteten Klasse für Tests
+    public class TestableEntity : Entity 
     {
         public TestableEntity(Position position, int initialHitPoints, int initialShieldPoints, int intitialMaxHitPoints) : base(position)
         {
@@ -38,7 +38,7 @@ namespace UnitTests
         public void TakeDamage_Should_Reduce_CurrentHitPoints()
         {
             // Arrange
-            var fakePosition = A.Fake<Position>(); // Erstellen eines gefälschten Position-Objekts mit FakeItEasy
+            var fakePosition = A.Fake<Position>(); 
             var entity = new TestableEntity(fakePosition, 100, 20, 100);
             int initialHitPoints = entity.currentHitPoints;
             int damageAmount = 20;
@@ -61,7 +61,7 @@ namespace UnitTests
         public void TakeDamage_Should_Set_IsDead_When_CurrentHitPoints_Less_Or_Equal_To_Zero()
         {
             // Arrange
-            var fakePosition = A.Fake<Position>(); // Erstellen eines gefälschten Position-Objekts mit FakeItEasy
+            var fakePosition = A.Fake<Position>(); 
             var entity = new TestableEntity(fakePosition, 10, 0, 100);
             int damageAmount = 20;
 
@@ -79,13 +79,13 @@ namespace UnitTests
             var fakePosition = A.Fake<Position>();
             var entity = new TestableEntity(fakePosition, 60, 0, 100);
             int initialHitPoints = entity.currentHitPoints;
-            int healAmount = 20;
+            int MaxHitPoints = entity.maxHitPoints;
 
             // Act
-            entity.HealDamage(healAmount);
+            entity.HealDamage();
 
             // Assert
-            entity.currentHitPoints.Should().Be(initialHitPoints + healAmount);
+            entity.currentHitPoints.Should().Be(initialHitPoints + (int)(MaxHitPoints * 0.1));
         }
 
         [Fact]
@@ -95,19 +95,12 @@ namespace UnitTests
             var fakePosition = A.Fake<Position>();
             var entity = new TestableEntity(fakePosition, 100, 0, 100);
             int maxHitPoints = entity.maxHitPoints;
-            int healAmount = 20;
 
             // Act
-            entity.HealDamage(healAmount);
+            entity.HealDamage();
 
             // Assert
             entity.currentHitPoints.Should().Be(maxHitPoints);
-        }
-
-        [Fact]
-        public void LevelUp_Should_Increase_Level()
-        {
-            //
         }
     }
 

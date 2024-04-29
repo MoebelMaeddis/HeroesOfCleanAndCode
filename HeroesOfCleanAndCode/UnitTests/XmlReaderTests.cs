@@ -29,7 +29,6 @@ namespace xUnit.Tests
 
             // Assert
             Assert.Equal(fakeXmlContent, xmlReader.xmlDocument.OuterXml);
-
             xmlReader.xmlDocument.OuterXml.Should().BeEquivalentTo(fakeXmlContent);
         }
 
