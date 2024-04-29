@@ -15,7 +15,7 @@ using HeroesOfCleanAndCode.Model.Enums;
 using HeroesOfCleanAndCode.Interfaces;
 using System.Runtime.InteropServices;
 
-namespace UnitTests
+namespace xUnit.Tests
 {
     public class TestableEntity : Entity 
     {
