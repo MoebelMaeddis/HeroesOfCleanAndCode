@@ -35,16 +35,8 @@ namespace HeroesOfCleanAndCode.Controller.Info
             Globals globals = Globals.Instance();
             GameState gameState = globals.gameState;
 
-            switch (option)
-            {
-                case InfoNextButtonOption.Entity:
-                    gameState.NextEntity();
-                    break;
-
-                case InfoNextButtonOption.Action:
-                    gameState.NextAction();
-                    break;
-            }
+            if (option == InfoNextButtonOption.Entity) gameState.NextEntity();
+            else if (option == InfoNextButtonOption.Action) gameState.NextAction();
 
             UpdateInfoView();
         }
@@ -56,7 +48,8 @@ namespace HeroesOfCleanAndCode.Controller.Info
             GameState gameState = globals.gameState;
             Game game  = globals.game;
 
-            Player activePlayer = game.players[gameState.activePlayerIndex]
+            Player activePlayer = game.players[gameState.activePlayerIndex];
+            Entity activeEntity = activePlayer.entities[gameState.activeEntityIndex];
         }
 
     }
