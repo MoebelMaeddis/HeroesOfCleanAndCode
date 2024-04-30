@@ -9,14 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\Artillery.png" />
+    <None Remove="Assets\Images\Aviated.png" />
+    <None Remove="Assets\Images\Builder.png" />
+    <None Remove="Assets\Images\City.png" />
     <None Remove="Assets\Images\Empty.png" />
     <None Remove="Assets\Images\Forest.png" />
     <None Remove="Assets\Images\Grass.png" />
+    <None Remove="Assets\Images\Heavy.png" />
+    <None Remove="Assets\Images\Infantery.png" />
+    <None Remove="Assets\Images\Medic.png" />
     <None Remove="Assets\Images\Mountain.png" />
     <None Remove="Assets\Images\Ore.png" />
-    <None Remove="Assets\Images\PBlue.png" />
-    <None Remove="Assets\Images\PGreen.png" />
-    <None Remove="Assets\Images\PRed.png" />
     <None Remove="Assets\Images\raw.svg" />
     <None Remove="Assets\Images\River.png" />
     <None Remove="Assets\Images\Water.png" />
@@ -28,6 +32,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\Artillery.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Aviated.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Builder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\City.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Assets\Images\Empty.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -37,19 +53,19 @@
     <EmbeddedResource Include="Assets\Images\Grass.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Heavy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Infantery.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\Medic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Assets\Images\Mountain.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\Images\Ore.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Images\PBlue.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Images\PGreen.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Images\PRed.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\Images\raw.svg">

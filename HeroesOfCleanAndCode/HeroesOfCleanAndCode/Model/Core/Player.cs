@@ -7,11 +7,11 @@ namespace HeroesOfCleanAndCode.Model.Core
 {
     public class Player
     {
-        private int moneyBalance { get; set; }
-        private int scienceBalance { get; set; }
+        public int moneyBalance { get; set; }
+        public int scienceBalance { get; set; }
 
-        private List<Structure> structures { get; set; }
-        private List<Entity> entities { get; set; }
+        public List<Structure> structures { get; set; }
+        public List<Entity> entities { get; set; }
 
         public Player(Position startPosition) 
         {

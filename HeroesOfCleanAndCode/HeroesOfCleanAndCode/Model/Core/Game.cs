@@ -18,7 +18,7 @@ namespace HeroesOfCleanAndCode.Model.Core
 
             for (int i = 0; i < numberOfPlayers; i++)
             {
-                Position startPosition = new Position(mapSize);
+                Position startPosition = new Position(mapSize, mapRelation);
 
                 this.players[i] = new Player(startPosition);
             }

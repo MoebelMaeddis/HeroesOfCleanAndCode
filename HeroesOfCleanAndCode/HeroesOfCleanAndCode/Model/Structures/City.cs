@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using HeroesOfCleanAndCode.Model.Helper;
-using HeroesOfCleanAndCode.Model.Structures.SubStructures;
 
 namespace HeroesOfCleanAndCode.Model.Structures
 {

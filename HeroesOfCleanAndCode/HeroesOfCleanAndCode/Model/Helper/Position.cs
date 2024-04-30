@@ -9,12 +9,12 @@ namespace HeroesOfCleanAndCode.Model.Helper
         public int x { get; }
         public int y { get; }
 
-        public Position(MapSize mapSize)
+        public Position(MapSize mapSize, MapRelation mapRelation)
         {
             Random random = new Random();
 
-            x = random.Next();
-            y = random.Next();
+            x = random.Next((int)mapSize * (int)mapRelation);
+            y = random.Next((int)mapSize);
         }
         public Position(int x, int y)
         {

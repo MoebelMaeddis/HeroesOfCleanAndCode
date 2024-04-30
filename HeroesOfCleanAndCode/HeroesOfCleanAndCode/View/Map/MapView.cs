@@ -2,12 +2,9 @@
 using HeroesOfCleanAndCode.Controller.Map;
 using HeroesOfCleanAndCode.Interfaces;
 using System.Windows.Controls;
-using System;
-using HeroesOfCleanAndCode.Assets.Images;
 using System.Windows.Media;
 using System.Windows.Controls.Primitives;
 using System.Windows;
-using HeroesOfCleanAndCode.Model.Enums;
 
 namespace HeroesOfCleanAndCode.View.Map
 {
@@ -54,19 +51,44 @@ namespace HeroesOfCleanAndCode.View.Map
 
         public void InitMapImages()
         {
-            Controller.UpdateMap();
 
             for (int y = 0; y < Controller.mapSizeY; y++)
             {
                 for (int x = 0; x < Controller.mapSizeX; x++)
                 {
-                    this.Children.Add(
-                        new Border() {
-                            BorderThickness = new Thickness(1),
-                            BorderBrush = Brushes.Black,
-                            Background = new ImageBrush(Controller.mapImages[x, y].Source)
-                        }
-                    );
+                    Border cellBorder = new Border()
+                    {
+                        BorderThickness = new Thickness(1),
+                        BorderBrush = Brushes.Gray,
+                        Background = new ImageBrush(Controller.mapCells[x, y].terrainImage.Source),
+                    };
+
+                    Border entityBorder = new Border()
+                    {
+                        Height = 10,
+                        Width = 20,
+                        BorderThickness = new Thickness(2),
+                        Background = new ImageBrush(Controller.mapCells[x, y].entityImage.Source),
+                        BorderBrush = Controller.mapCells[x, y].entityColor,
+                    };
+
+                    Border structureBorder = new Border()
+                    {
+                        Height = 10,
+                        Width = 20,
+                        BorderThickness = new Thickness(2),
+                        Background = new ImageBrush(Controller.mapCells[x, y].structureImage.Source),
+                        BorderBrush = Controller.mapCells[x, y].structureColor,
+                    };
+
+                    StackPanel content = new StackPanel();
+                    content.VerticalAlignment = VerticalAlignment.Bottom;
+                    content.Orientation = Orientation.Horizontal;
+                    content.Children.Add(entityBorder);
+                    content.Children.Add(structureBorder);
+
+                    cellBorder.Child = content;
+                    this.Children.Add(cellBorder);
                 }
             }
         }
