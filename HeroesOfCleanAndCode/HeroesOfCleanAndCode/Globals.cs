@@ -1,5 +1,6 @@
 ﻿using HeroesOfCleanAndCode.Model.Core;
 using HeroesOfCleanAndCode.Model.Enums;
+using HeroesOfCleanAndCode.Model.Helper;
 
 namespace HeroesOfCleanAndCode
 {
@@ -9,6 +10,7 @@ namespace HeroesOfCleanAndCode
         private static readonly object padlock = new object();
         public Game game { get; set; }
         public GameState gameState { get; set; }
+        public EventAggregator eventAggregator { get; set; }
 
         Globals() { }
 
@@ -23,6 +25,7 @@ namespace HeroesOfCleanAndCode
                         instance = new Globals();
                         instance.game = new Game(Difficulty.Easy, 2, MapSize.Tiny, MapRelation.Double);
                         instance.gameState = new GameState();
+                        instance.eventAggregator = new EventAggregator();
                     }
                 }
             }

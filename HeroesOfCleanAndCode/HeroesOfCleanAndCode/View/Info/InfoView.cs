@@ -21,19 +21,28 @@ namespace HeroesOfCleanAndCode.View.Info
             InitLayout();
         }
 
+        public void Update()
+        {
+            Controller.UpdateInfoView();
+        }
+
         public void InitLayout()
         {
-            Universal.GridDefinitions(this, Tuple.Create(8, 2));
+            Universal.GridDefinitions(this, Tuple.Create(10, 3));
 
             InfoButton(InfoNextButtonOption.Entity, new Position(1, 0));
             InfoButton(InfoNextButtonOption.Action, new Position(1, 1));
 
-            InfoLabel(InfoEntityLabelOptions.Name, new Position(3, 0));
-            InfoLabel(InfoEntityLabelOptions.Health, new Position(4, 0));
-            InfoLabel(InfoEntityLabelOptions.Damage, new Position(4, 1));
-            InfoLabel(InfoEntityLabelOptions.Armor, new Position(5, 0));
-            InfoLabel(InfoEntityLabelOptions.Speed, new Position(6, 0));
-            InfoLabel(InfoEntityLabelOptions.Range, new Position(6, 1));
+            InfoEntityLabel(InfoEntityLabelOptions.Name, new Position(5, 0));
+            InfoEntityLabel(InfoEntityLabelOptions.Health, new Position(6, 0));
+            InfoEntityLabel(InfoEntityLabelOptions.Damage, new Position(6, 1));
+            InfoEntityLabel(InfoEntityLabelOptions.Armor, new Position(7, 0));
+            InfoEntityLabel(InfoEntityLabelOptions.Speed, new Position(8, 0));
+            InfoEntityLabel(InfoEntityLabelOptions.Range, new Position(8, 1));
+
+            InfoGameLabel(InfoGameLabelOptions.Round, new Position(3, 0));
+            InfoGameLabel(InfoGameLabelOptions.Player, new Position(3, 1));
+            InfoGameLabel(InfoGameLabelOptions.Entity, new Position(3, 2));
         }
 
         public void InfoButton(InfoNextButtonOption option, Position position)
@@ -54,13 +63,27 @@ namespace HeroesOfCleanAndCode.View.Info
             Children.Add(button);
         }
 
-        public void InfoLabel(InfoEntityLabelOptions labelOption, Position position)
+        public void InfoEntityLabel(InfoEntityLabelOptions labelOption, Position position)
         {
             Label label = new Label();
             Styles.SetInfoLabelStyle(label);
 
             label.Content = "Entity " + labelOption.ToString();
             
+            Grid.SetColumn(label, position.x);
+            Grid.SetRow(label, position.y);
+
+            Labels.Add(labelOption.ToString(), label);
+            Children.Add(label);
+        }
+
+        public void InfoGameLabel(InfoGameLabelOptions labelOption, Position position)
+        {
+            Label label = new Label();
+            Styles.SetInfoLabelStyle(label);
+
+            label.Content = labelOption.ToString();
+
             Grid.SetColumn(label, position.x);
             Grid.SetRow(label, position.y);
 

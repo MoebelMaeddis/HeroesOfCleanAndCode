@@ -8,11 +8,12 @@ using System.Windows.Media;
 using System;
 using HeroesOfCleanAndCode.Model.Entities;
 using HeroesOfCleanAndCode.Model.Helper;
+using HeroesOfCleanAndCode.Interfaces;
 
 
 namespace HeroesOfCleanAndCode.Controller.Map
 {
-    public class MapController
+    public class MapController : IController
     {
         public MapCell[,] mapCells;
         public readonly int mapSizeX, mapSizeY;
@@ -39,10 +40,15 @@ namespace HeroesOfCleanAndCode.Controller.Map
 
         public MapView View { get; private set; }
 
+        private readonly EventAggregator _eventAggregator;
+
         public MapController(MapView view)
         {
             Globals globals = Globals.Instance();
             Game game = globals.game;
+
+            _eventAggregator = globals.eventAggregator;
+            _eventAggregator.UpdateCalled += Update;
 
             playerColors = InitPlayerColors();
 
@@ -50,9 +56,14 @@ namespace HeroesOfCleanAndCode.Controller.Map
             mapSizeX = mapSizeY * (int)game.map.mapRelation;
 
             mapCells = InitMapCells(game.map.terrainMap);
-            UpdateMap(game);
+            UpdateMapView();
 
             View = view;
+        }
+
+        public void Update(object sender, string updateCallData)
+        {
+            UpdateMapView();
         }
 
         public MapCell[,] InitMapCells(Terrain[,] terrain)
@@ -92,8 +103,11 @@ namespace HeroesOfCleanAndCode.Controller.Map
             return colorDict;
         }
 
-        public void UpdateMap(Game game)
+        public void UpdateMapView()
         {
+            Globals globals = Globals.Instance();
+            Game game = globals.game;
+
             for (int y = 0; y < mapSizeY; y++)
             {
                 for (int x = 0; x < mapSizeX; x++)
@@ -124,6 +138,13 @@ namespace HeroesOfCleanAndCode.Controller.Map
                     mapCells[position.x, position.y].structureImage.Source = typesToImage[game.players[i].structures[j].GetType()];
                 }
             }
+
+            GameState gameState = globals.gameState;
+
+            int xPos = game.players[gameState.activePlayerIndex].entities[gameState.activeEntityIndex].position.x;
+            int yPos = game.players[gameState.activePlayerIndex].entities[gameState.activeEntityIndex].position.y;
+            mapCells[xPos, yPos].HighlightCell();
+
         }
     }
 }

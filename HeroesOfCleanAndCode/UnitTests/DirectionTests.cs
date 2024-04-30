@@ -23,7 +23,7 @@ namespace xUnit.Tests
         public void Directions_Should_Have_Correct_Offsets()
         {
             // Arrange & Act
-            var inDirection = Direction.In;
+            var inDirection = Direction.None;
             var upDirection = Direction.Up;
             var leftDirection = Direction.Left;
             var downDirection = Direction.Down;

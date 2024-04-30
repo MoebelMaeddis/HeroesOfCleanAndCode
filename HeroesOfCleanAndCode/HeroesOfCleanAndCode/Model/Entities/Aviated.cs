@@ -12,7 +12,7 @@ namespace HeroesOfCleanAndCode.Model.Entities
             damage = 140;
 
             mobility = 15;
-            radius = 10;
+            range = 10;
         }
     }
 }

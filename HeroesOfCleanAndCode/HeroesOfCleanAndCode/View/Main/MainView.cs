@@ -26,5 +26,7 @@ namespace HeroesOfCleanAndCode.View.Main
             Children.Add(new MapView());
             Children.Add(new InfoView());
         }
+
+        public void Update() { }
     }
 }

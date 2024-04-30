@@ -7,6 +7,7 @@ namespace HeroesOfCleanAndCode.Model.Helper
     public class MapCell
     {
         public Image terrainImage {  get; set; }
+        public Brush cellBorderColor { get; set; }
         public Image entityImage {  get; set; }
         public Brush entityColor { get; set; }
         public Image structureImage { get; set; }
@@ -15,6 +16,7 @@ namespace HeroesOfCleanAndCode.Model.Helper
         public MapCell()
         {
             terrainImage = new Image() { Source = Images.Empty };
+            cellBorderColor = Brushes.Black;
 
             entityImage = new Image() { Source = Images.Empty };
             entityColor = Brushes.Gray;
@@ -25,11 +27,18 @@ namespace HeroesOfCleanAndCode.Model.Helper
 
         public void ClearCell()
         {
+            cellBorderColor = Brushes.Black;
+
             entityImage.Source = Images.Empty;
             entityColor = Brushes.Gray;
 
             structureImage.Source = Images.Empty;
             structureColor = Brushes.Gray;
+        }
+
+        public void HighlightCell()
+        {
+            cellBorderColor = Brushes.White;
         }
     }
 }

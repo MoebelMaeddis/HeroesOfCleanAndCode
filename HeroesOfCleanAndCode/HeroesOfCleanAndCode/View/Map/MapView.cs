@@ -27,6 +27,13 @@ namespace HeroesOfCleanAndCode.View.Map
             InitMap();
         }
 
+        public void Update()
+        {
+            Controller.UpdateMapView();
+
+            //UpdateMapCells();
+        }
+
         private void InitGrid()
         {
             Width = 1700;
@@ -46,10 +53,10 @@ namespace HeroesOfCleanAndCode.View.Map
 
         void InitMap()
         {
-            InitMapImages();
+            InitMapCells();
         }
 
-        public void InitMapImages()
+        public void InitMapCells()
         {
 
             for (int y = 0; y < Controller.mapSizeY; y++)
@@ -58,8 +65,8 @@ namespace HeroesOfCleanAndCode.View.Map
                 {
                     Border cellBorder = new Border()
                     {
-                        BorderThickness = new Thickness(1),
-                        BorderBrush = Brushes.Gray,
+                        BorderThickness = new Thickness(2),
+                        BorderBrush = Controller.mapCells[x, y].cellBorderColor,
                         Background = new ImageBrush(Controller.mapCells[x, y].terrainImage.Source),
                     };
 
@@ -67,7 +74,7 @@ namespace HeroesOfCleanAndCode.View.Map
                     {
                         Height = 10,
                         Width = 20,
-                        BorderThickness = new Thickness(2),
+                        BorderThickness = new Thickness(1),
                         Background = new ImageBrush(Controller.mapCells[x, y].entityImage.Source),
                         BorderBrush = Controller.mapCells[x, y].entityColor,
                     };
@@ -76,7 +83,53 @@ namespace HeroesOfCleanAndCode.View.Map
                     {
                         Height = 10,
                         Width = 20,
+                        BorderThickness = new Thickness(1),
+                        Background = new ImageBrush(Controller.mapCells[x, y].structureImage.Source),
+                        BorderBrush = Controller.mapCells[x, y].structureColor,
+                    };
+
+                    StackPanel content = new StackPanel();
+                    content.VerticalAlignment = VerticalAlignment.Bottom;
+                    content.Orientation = Orientation.Horizontal;
+                    content.Children.Add(entityBorder);
+                    content.Children.Add(structureBorder);
+
+                    cellBorder.Child = content;
+                    this.Children.Add(cellBorder);
+                }
+            }
+        }
+
+        public void UpdateMapCells()
+        {
+
+            for (int y = 0; y < Controller.mapSizeY; y++)
+            {
+                for (int x = 0; x < Controller.mapSizeX; x++)
+                {
+
+
+                    Border cellBorder = new Border()
+                    {
                         BorderThickness = new Thickness(2),
+                        BorderBrush = Controller.mapCells[x, y].cellBorderColor,
+                        Background = new ImageBrush(Controller.mapCells[x, y].terrainImage.Source),
+                    };
+
+                    Border entityBorder = new Border()
+                    {
+                        Height = 10,
+                        Width = 20,
+                        BorderThickness = new Thickness(1),
+                        Background = new ImageBrush(Controller.mapCells[x, y].entityImage.Source),
+                        BorderBrush = Controller.mapCells[x, y].entityColor,
+                    };
+
+                    Border structureBorder = new Border()
+                    {
+                        Height = 10,
+                        Width = 20,
+                        BorderThickness = new Thickness(1),
                         Background = new ImageBrush(Controller.mapCells[x, y].structureImage.Source),
                         BorderBrush = Controller.mapCells[x, y].structureColor,
                     };

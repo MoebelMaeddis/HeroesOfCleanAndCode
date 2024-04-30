@@ -15,7 +15,7 @@ namespace HeroesOfCleanAndCode.Interfaces
         bool isDead { get; }
 
         byte mobility { get; }
-        byte radius { get; }
+        byte range { get; }
 
 
         void Move(Direction direction);

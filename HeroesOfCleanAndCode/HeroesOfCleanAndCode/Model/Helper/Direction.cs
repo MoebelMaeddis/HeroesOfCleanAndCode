@@ -5,7 +5,7 @@ namespace HeroesOfCleanAndCode.Model.Helper
 {
     public class Direction
     {
-        public readonly static Direction In = new Direction(0, 0);
+        public readonly static Direction None = new Direction(0, 0);
         public readonly static Direction Up = new Direction(-1, 0);
         public readonly static Direction Left = new Direction(0, -1);
         public readonly static Direction Down = new Direction(1, 0);

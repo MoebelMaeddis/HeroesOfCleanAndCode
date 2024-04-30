@@ -21,5 +21,7 @@ namespace HeroesOfCleanAndCode
         {
             Content = new MainView();
         }
+
+        public void Update() { }
     }
 }

@@ -16,7 +16,7 @@ namespace HeroesOfCleanAndCode.Model.Entities
         public bool isDead { get; protected set; }
 
         public byte mobility { get; protected set; }
-        public byte radius { get; protected set; }
+        public byte range { get; protected set; }
 
 
         protected Entity(Position position)

@@ -2,11 +2,10 @@
 using HeroesOfCleanAndCode.Model.Enums;
 using HeroesOfCleanAndCode.Model.Helper;
 using HeroesOfCleanAndCode.Model.Structures;
-using System;
 
 namespace HeroesOfCleanAndCode.Model.Core
 {
-    internal class GameState
+    public class GameState
     {
         public int activeRoundIndex { get; set; }
         public int activePlayerIndex {  get; set; }
@@ -31,6 +30,8 @@ namespace HeroesOfCleanAndCode.Model.Core
         {
             Globals globals = Globals.Instance();
             Game game = globals.game;
+
+            activeAction = Actions.Move;
 
             activeEntityIndex++;
             if (activeEntityIndex >= game.players[activePlayerIndex].entities.Count)
